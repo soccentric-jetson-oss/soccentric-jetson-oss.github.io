@@ -1,0 +1,36 @@
+# SPDX-License-Identifier: GPL-2.0-only
+# Copyright (c) 2026 SoC Centric LLC
+#
+# GitLab CI/CD for soccentric-jetson-oss — Static documentation site
+
+stages:
+  - validate
+  - deploy
+
+variables:
+  GIT_SUBMODULE_STRATEGY: none
+
+validate:
+  stage: validate
+  image: ubuntu:22.04
+  script:
+    - test -f index.html && echo "index.html exists" || (echo "Missing index.html" && exit 1)
+    - test -f style.css && echo "style.css exists" || (echo "Missing style.css" && exit 1)
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+    - if: $CI_COMMIT_BRANCH == 'master'
+
+pages:
+  stage: deploy
+  image: ubuntu:22.04
+  script:
+    - mkdir -p public
+    - cp -r *.html *.css *.js public/ 2>/dev/null || true
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'master'
+  environment:
+    name: gitlab-pages
+    url: $CI_PAGES_URL
