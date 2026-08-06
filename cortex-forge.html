@@ -141,6 +141,156 @@
         </div>
       </div>
 
+    
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!--  Example Applications                                        -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <div class="section" style="margin-top:48px;">
+      <h2>Example Applications</h2>
+      <p>Ten standalone client applications that consume the Cortex Forge Server's gRPC API. Each one demonstrates a real-world ML inference workflow — detection, classification, OCR, audio, sensor fusion, benchmarking — without modifying the core platform. They're the same apps we use internally to validate our frameworks before shipping to customers.</p>
+      <div class="sub-grid">
+
+        <div class="sub-card">
+          <div class="sub-header">
+            <h3>Object Tracker</h3>
+            <span class="tech">Detection · Tracking</span>
+          </div>
+          <p>Real-time object detection and tracking appliance. Detects and tracks people, vehicles, and packages from a live camera feed with persistent track IDs, configurable alert zones, and detection heatmaps.</p>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag">YOLO</span>
+            <span class="tag">Kalman Filter</span>
+            <span class="tag">Multi-Camera</span>
+          </div>
+          <a class="repo-link" href="https://github.com/soccentric-jetson-oss/cortex-forge-app-object-tracker">View Repository →</a>
+        </div>
+
+        <div class="sub-card">
+          <div class="sub-header">
+            <h3>Defect Inspector</h3>
+            <span class="tech">Classification · QC</span>
+          </div>
+          <p>Manufacturing defect detection system. Inspects items on a production line using a defect-classification model, with pass/fail decisions, multi-class defect breakdown, and a manual review queue for borderline items.</p>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag">Binary Classification</span>
+            <span class="tag">Multi-Class</span>
+            <span class="tag">Review Queue</span>
+          </div>
+          <a class="repo-link" href="https://github.com/soccentric-jetson-oss/cortex-forge-app-defect-inspector">View Repository →</a>
+        </div>
+
+        <div class="sub-card">
+          <div class="sub-header">
+            <h3>Plate Reader</h3>
+            <span class="tech">OCR · Detection</span>
+          </div>
+          <p>License plate and asset ID recognition. Two-stage pipeline: detect plate regions, then recognize text. Features confidence gating, deduplication, and a recognition log with thumbnails.</p>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag">LPRNet</span>
+            <span class="tag">Detect+OCR</span>
+            <span class="tag">Deduplication</span>
+          </div>
+          <a class="repo-link" href="https://github.com/soccentric-jetson-oss/cortex-forge-app-plate-reader">View Repository →</a>
+        </div>
+
+        <div class="sub-card">
+          <div class="sub-header">
+            <h3>Acoustic Sentinel</h3>
+            <span class="tech">Audio · Anomaly Detection</span>
+          </div>
+          <p>Acoustic anomaly detection system. Listens to live audio feeds and flags unusual sounds — machinery faults, glass breaks, gunshots — proving Cortex Forge's inference pipeline is genuinely modality-agnostic.</p>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag">Spectrogram</span>
+            <span class="tag">Anomaly Detection</span>
+            <span class="tag">Real-Time Audio</span>
+          </div>
+          <a class="repo-link" href="https://github.com/soccentric-jetson-oss/cortex-forge-app-acoustic-sentinel">View Repository →</a>
+        </div>
+
+        <div class="sub-card">
+          <div class="sub-header">
+            <h3>Voice Command</h3>
+            <span class="tech">Keyword Spotting</span>
+          </div>
+          <p>Keyword spotting and voice command appliance. Listens for trained voice commands with configurable confidence thresholds, debounce logic, and visual/audible confirmation — ideal for hands-free industrial control.</p>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag">Wake Word</span>
+            <span class="tag">Command Mapping</span>
+            <span class="tag">Low Latency</span>
+          </div>
+          <a class="repo-link" href="https://github.com/soccentric-jetson-oss/cortex-forge-app-voice-command">View Repository →</a>
+        </div>
+
+        <div class="sub-card">
+          <div class="sub-header">
+            <h3>Model Gateway</h3>
+            <span class="tech">Model Management</span>
+          </div>
+          <p>Multi-model edge inference gateway. Demonstrates loading, unloading, and hot-swapping multiple models concurrently on a single device. Features a model catalog, per-accelerator resource display, and a test harness panel.</p>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag">Hot-Swap</span>
+            <span class="tag">Multi-Model</span>
+            <span class="tag">Concurrency</span>
+          </div>
+          <a class="repo-link" href="https://github.com/soccentric-jetson-oss/cortex-forge-app-model-gateway">View Repository →</a>
+        </div>
+
+        <div class="sub-card">
+          <div class="sub-header">
+            <h3>Model Arena</h3>
+            <span class="tech">A/B Comparison</span>
+          </div>
+          <p>A/B model comparison tool. Runs two model versions concurrently on different accelerators and compares latency, throughput, and accuracy side by side. Includes batch comparison mode and exportable reports.</p>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag">Benchmarking</span>
+            <span class="tag">A/B Testing</span>
+            <span class="tag">Accelerator Comparison</span>
+          </div>
+          <a class="repo-link" href="https://github.com/soccentric-jetson-oss/cortex-forge-app-model-arena">View Repository →</a>
+        </div>
+
+        <div class="sub-card">
+          <div class="sub-header">
+            <h3>Predictive Maintenance</h3>
+            <span class="tech">Time-Series · Anomaly</span>
+          </div>
+          <p>Predictive maintenance node. Ingests sensor time-series data (vibration, temperature) and flags developing equipment issues before failure. Features live sensor trends, anomaly scores, and historical scroll-back.</p>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag">Time-Series</span>
+            <span class="tag">Anomaly Detection</span>
+            <span class="tag">Sensor Fusion</span>
+          </div>
+          <a class="repo-link" href="https://github.com/soccentric-jetson-oss/cortex-forge-app-predictive-maintenance">View Repository →</a>
+        </div>
+
+        <div class="sub-card">
+          <div class="sub-header">
+            <h3>Quality Grader</h3>
+            <span class="tech">Agriculture · Classification</span>
+          </div>
+          <p>Agriculture and food quality grading system. Grades items by ripeness, size, and defect presence from a camera feed. Features grade distribution dashboards, configurable thresholds, and a manual review queue.</p>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag">Produce Grading</span>
+            <span class="tag">Multi-Class</span>
+            <span class="tag">Sorting Line</span>
+          </div>
+          <a class="repo-link" href="https://github.com/soccentric-jetson-oss/cortex-forge-app-quality-grader">View Repository →</a>
+        </div>
+
+        <div class="sub-card">
+          <div class="sub-header">
+            <h3>Benchmark Suite</h3>
+            <span class="tech">Performance · Benchmarking</span>
+          </div>
+          <p>AGX Orin AI benchmark suite. Runs a standard battery of models across GPU, DLA, and PVA, reporting throughput, latency, and power per accelerator. Includes concurrency testing, fault injection, and historical run comparison.</p>
+          <div class="tags" style="margin-top:8px;">
+            <span class="tag">GPU Benchmark</span>
+            <span class="tag">DLA Benchmark</span>
+            <span class="tag">Power/Performance</span>
+          </div>
+          <a class="repo-link" href="https://github.com/soccentric-jetson-oss/cortex-forge-app-benchmark-suite">View Repository →</a>
+        </div>
+
+      </div>
     </div>
 
     <div class="footer">
